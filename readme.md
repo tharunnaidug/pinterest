@@ -20,3 +20,7 @@ on scripts at pacakage.json and rename index.js to app.js
 for trail view of project (if hosted)
 
 Use userid and password as 'a' Dont try too much as the DB is freely hosted
+"# pinterst" 
+"# pinterest" 
+"# pinterest" 
+"# pinterest" 

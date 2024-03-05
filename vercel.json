@@ -12,11 +12,39 @@
       "dest": "/index.js"
     },
     {
-      "src": "/api/video",
+      "src": "/post",
       "dest": "/index.js"
     },
     {
-      "src": "/api/audio",
+      "src": "/profile",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/feed:id",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/edit",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/login",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/logout",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/register",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/show/posts",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/feed",
       "dest": "/index.js"
     }
   ]
