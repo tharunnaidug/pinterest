@@ -1,0 +1,39 @@
+<% include ./partials/header.ejs %>
+<div class="profile w-full min-h-screen bg-zinc-700 text-white pt-1">
+    <% include ./partials/nav.ejs %>
+    <div class="prodet flex flex-col items-center justify-center mt-20">
+        <div class="w-32 h-32 bg-zinc-200 rounded-full overflow-hidden" id="pro">
+            <img class="h-full w-full object-cover" src="/images/uploads/<%= user.profileimg %>" alt="">
+        </div>
+        <h1 class="text2xl font-semibold cursor-default "><%=name %></h1>
+        <h3 class="text-md cursor-default">@<%=uname %></h3>
+        <div class="probtn flex flex-row">
+            <a href="/edit" class="px-7 text-xs py-3 bg-zinc-500 rounded-full mt-3 mr-4">Edit</a>
+            <a href="" class="px-7 text-xs py-3 bg-zinc-500 rounded-full mt-3">Share</a>
+        </div>
+        <a href="/post" class="bg-red-600 py-4 px-10 rounded-full text-sm mt-4">New Post</a>
+    </div>
+    <div class="max-[600px]:mt-4 max-[600px]:items-center max-[600px]:justify-center cards flex flex-wrap gap-4 px-10 mx-4">
+        <div>
+            <div class="w-52 h-40 bg-zinc-200 rounded-lg overflow-hidden " id="img">
+                <img class="h-full w-full object-cover"  src="/images/uploads/<%= user.posts[0]?.img %>" alt="Your Pins Here">
+            </div>
+            <a href="show/posts" class="text-xl font-semibold">Your pins</a>
+            <h5 class="text-sm font-mediam opacity-60"><%= user.posts.length %> pins</h5>
+        </div>
+    </div>
+</div>
+<script>
+    let user = `<%=user.posts.length%>`
+    let pro=`<%= user.profileimg %>`
+    const img =document.getElementById("img")
+    const proimg =document.getElementById("pro")
+    if (user==0) {
+        img.innerHTML=` <img class="h-full w-full object-cover" id="img" src="/images/uploads/pins.jpg" alt="Your Pins Here">`
+   }
+   if(pro==''){
+    proimg.innerHTML=` <img class="h-full w-full object-cover" src="/images/uploads/icon.png" alt="">`
+   }
+    
+</script>
+<% include ./partials/footer.ejs %>

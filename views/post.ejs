@@ -1,0 +1,16 @@
+<% include ./partials/header.ejs %>
+<div class="post w-full min-h-screen bg-zinc-700 text-white pt-1">
+    <% include ./partials/nav.ejs %>
+    <div class="con r">
+        <form class="mt-6 flex flex-col items-center justify-center " action="/post" method="post" enctype="multipart/form-data">
+        <h1 class="text-center mb-5 text-3xl">Add New Post</h1>
+        <input  class="px-3 py-1  mr-4 cursor-pointer "  type="file" name="image" id="">
+        <label for="title" class="text-md cursor-pointer">Title</label>
+        <input class="px-3 py-1   mr-4 text-black" type="text" name="title" id="title" placeholder="title">
+        <label for="desc" class="text-md cursor-pointer">Desciption</label>
+        <textarea class="px-3 py-1   mr-4 text-black"   name="desc" id="desc" placeholder="Desciption"></textarea>
+        <button class="bg-red-600 py-2 px-5 rounded-full text-sm mt-4" type="submit">Upload</button>
+        </form>
+    </div>
+</div>
+<% include ./partials/footer.ejs %>

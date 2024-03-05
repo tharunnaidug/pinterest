@@ -1,0 +1,16 @@
+<% include ./partials/header.ejs %>
+    <div class="show w-full min-h-screen bg-zinc-700 text-white pt-1">
+        <nav class="flex flex-row justify-between">
+            <h2 class="px-8 ml-6 text-xl py-1 cursor-default">Pinterest</h2>
+            <a class="px-8  text-xs py-3 bg-zinc-500 rounded-full mt-3 mr-8" href="/feed">Feed</a>
+            <a class="px-7 text-xs py-3 bg-red-500 rounded-full mt-3 mr-4" href="/logout">Logout</a>
+        </nav>
+        <div class="con flex flex-col items-center justify-center">
+            <img class="w-half h-full object-cover mt-4" src="/images/uploads/<%= post.img %>" alt="">
+            <div class="con flex flex-col items-center justify-center px-5 py-5">
+            <h4 class="text-2xl py-3">User:<%= post.user.name %></h4>
+            <h5 class="text-xl py-1">Title:<%= post.title %></h5>
+            <h5 class="text-sm py-1">Description:<%= post.desc %></h5>
+           </div>
+        </div>
+    </div>

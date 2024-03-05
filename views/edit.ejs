@@ -1,0 +1,32 @@
+<% include ./partials/header.ejs %>
+<div class="post w-full min-h-screen bg-zinc-700 text-white pt-1">
+    <% include ./partials/nav.ejs %>
+   <div class="con flex flex-col items-center justify-center">
+    <h1 class="text-2xl py-3">Your Profile</h1>
+    <form class="mt-6 flex flex-col items-center justify-center " onsubmit="vaildForm()" action="/edit" method="post" enctype="multipart/form-data">
+    <div class="minCon ml-40">
+        <div class="w-32 h-32 bg-zinc-200 rounded-full overflow-hidden">
+            <img class="h-full w-full object-cover" src="/images/uploads/<%= img %>" alt="">
+        </div>
+        <input  class="px-3 py-3  mr-4 cursor-pointer "  type="file" name="image" id="file">
+    </div>
+    <div class="minCon">
+        <p class="text-white mt-3">Username</p>
+        <input class="px-3 py-1  mr-4 text-black" type="text" name="uname" id="title" value="<%= uname %>"  >
+    </div>
+    <div class="minCon">
+        <p class="text-white mt-3">Name</p>
+        <input class="px-3 py-1  mr-4 text-black" type="text" name="name" id="name" value="<%= name %>"  >
+    </div>
+    <div class="minCon">
+        <p class="text-white mt-3">E-mail</p>
+        <input class="px-3 py-1  mr-4 text-black" type="email" name="email" id="email" value="<%= mail %>"  >
+    </div>
+    <a href="/profile" class="px-7 text-xs py-3 bg-red-500 rounded-full mt-3 mr-4">Profile</a>
+    <button class="bg-red-600 py-2 px-5 rounded-full text-sm mt-4 submitBtn" type="submit">Save</button>
+    </form>
+   </div>
+</div>
+</body>
+    <script src="/javascripts/script.js"></script>
+</html>
