@@ -24,3 +24,6 @@ Use userid and password as 'a' Dont try too much as the DB is freely hosted
 "# pinterest" 
 "# pinterest" 
 "# pinterest" 
+"# pinterest" 
+"# pinterest" 
+"# pin" 
